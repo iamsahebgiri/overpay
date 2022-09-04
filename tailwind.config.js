@@ -29,6 +29,9 @@ module.exports = {
     transitionTimingFunction: {
       spring: "cubic-bezier(.25,1.6,.5,.8)",
     },
+    backgroundImage: {
+      pattern: "url('/images/pattern.svg')",
+    },
   },
   plugins: [require("@tailwindcss/forms")],
 };
