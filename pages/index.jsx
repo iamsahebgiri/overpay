@@ -1,16 +1,15 @@
-import { Button } from "components/common/button";
-import SplitScreen from "components/layout/split-screen";
+import SignUp from "components/page/sign-up";
 import Head from "next/head";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>MathonGo</title>
-        <meta name="description" content="Login and registration" />
+        <title>Overpay</title>
+        <meta name="description" content="Register your account" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SplitScreen />
+      <SignUp />
     </>
   );
 }

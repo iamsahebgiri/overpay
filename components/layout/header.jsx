@@ -10,7 +10,7 @@ export const Header = () => {
         <div className="flex justify-between items-center ">
           <Link href="/">
             <a>
-              <Overpay mode="light" />
+              <Overpay type="duotone" />
             </a>
           </Link>
           <ButtonLink href="/">Logout</ButtonLink>

@@ -21,7 +21,7 @@ export const TextField = React.forwardRef(
             name={name}
             type={show ? "text" : type}
             className={classNames(
-              "block w-full py-3 rounded-xl placeholder-slate-400 bg-white border border-slate-300",
+              "block w-full py-3 rounded-xl placeholder-slate-400 bg-white border border-slate-300 focus:border-brand-500 focus:ring-0",
               type === "password" && "pr-12",
               className
             )}
