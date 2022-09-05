@@ -1,4 +1,5 @@
 import { classNames } from "lib/classnames";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Overpay } from "./logo";
 
@@ -40,8 +41,12 @@ const Carousel = ({ hasLogo = false }) => {
     <div className="p-4 h-full">
       <div className="bg-brand-500 h-full relative">
         {hasLogo && (
-          <div className="absolute  p-4">
-            <Overpay type="white" />
+          <div className="absolute p-4">
+            <Link href="/">
+              <a>
+                <Overpay type="white" />
+              </a>
+            </Link>
           </div>
         )}
         <div className="bg-pattern h-full bg-contain bg-center bg-no-repeat px-6 py-8 flex flex-col justify-between items-center">

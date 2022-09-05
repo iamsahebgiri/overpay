@@ -11,7 +11,11 @@ const SignIn = () => {
   return (
     <div className="min-h-screen flex">
       <div className="flex-1 flex flex-col justify-between py-6 px-4 sm:px-6">
-        <Overpay type="" />
+        <Link href="/">
+          <a>
+            <Overpay />
+          </a>
+        </Link>
         <div className="mx-auto w-full max-w-sm  lg:w-96">
           <div>
             <h2 className="text-3xl text-center font-extrabold text-slate-900">
