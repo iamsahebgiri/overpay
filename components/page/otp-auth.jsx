@@ -1,5 +1,5 @@
 import { Button } from "components/common/button";
-import { TextField } from "components/common/text-field";
+import OtpInput from "components/common/opt-input";
 import FullHeader from "components/layout/full-header";
 import React from "react";
 
@@ -21,14 +21,7 @@ const OtpAuth = () => {
         <div>
           <form action="#" method="POST">
             <div>
-              <TextField
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                placeholder="Username or email"
-                required
-              />
+              <OtpInput />
             </div>
           </form>
         </div>
