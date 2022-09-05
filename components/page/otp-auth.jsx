@@ -2,15 +2,30 @@ import { Button } from "components/common/button";
 import OtpInput from "components/common/opt-input";
 import FullHeader from "components/layout/full-header";
 import { useAuth } from "lib/auth";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const OtpAuth = () => {
-  const { user, verifyAccount, retriesIn, loading } = useAuth();
+  const [retriesIn, setRetriesIn] = useState(2);
+
+  const { user, verifyAccount, loading } = useAuth();
   let redactedEmail = "";
   let [name, provider] = user.email.split("@");
   name =
     name.length > 5 ? name.slice(0, 5) + "*".repeat(name.length - 5) : name;
   redactedEmail = `${name}@${provider}`;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRetriesIn((retriesIn) => retriesIn - 1);
+    }, 1000);
+
+    if (retriesIn < 0) clearInterval(interval);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [retriesIn]);
+
   return (
     <FullHeader>
       <div className="space-y-6">
@@ -40,8 +55,14 @@ const OtpAuth = () => {
                 Verify Account
               </Button>
               <div className="w-full mt-4 text-center">
-                Resend code in{" "}
-                <span className="font-extrabold text-slate-700">{`${retriesIn}:00`}</span>
+                {retriesIn > 0 ? (
+                  <>
+                    Resend code in{" "}
+                    <span className="font-extrabold text-slate-700">{`${retriesIn}:00`}</span>
+                  </>
+                ) : (
+                  "Send again"
+                )}
               </div>
             </div>
           </form>
