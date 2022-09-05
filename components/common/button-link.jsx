@@ -15,7 +15,7 @@ export const ButtonLink = React.forwardRef(
       locale,
       className,
       variant = "primary",
-      responsive,
+      size,
       ...rest
     },
     forwardedRef
@@ -34,7 +34,7 @@ export const ButtonLink = React.forwardRef(
         <a
           {...rest}
           ref={forwardedRef}
-          className={buttonClasses({ className, variant, responsive })}
+          className={buttonClasses({ className, variant, size })}
         />
       </Link>
     );

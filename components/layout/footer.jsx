@@ -2,7 +2,7 @@ import * as React from "react";
 
 export function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-between gap-2 text-sm md:gap-4 md:flex-row text-slate-600">
+    <footer className="w-full flex flex-col items-center justify-between gap-2 text-sm md:gap-4 md:flex-row text-slate-600 max-w-7xl mx-auto px-2 py-3">
       <a
         href="https://github.com/iamsahebgiri"
         target="_blank"
