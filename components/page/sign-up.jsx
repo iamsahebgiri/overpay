@@ -1,11 +1,8 @@
-import { Button } from "components/common/button";
 import { ButtonLink } from "components/common/button-link";
 import Carousel from "components/common/carousel";
 import { Google } from "components/common/logo";
-import { TextField } from "components/common/text-field";
+import SignUpForm from "components/form/sign-up";
 import { Footer } from "components/layout/footer";
-import Link from "next/link";
-import React from "react";
 
 const SignUp = () => {
   return (
@@ -54,85 +51,7 @@ const SignUp = () => {
             </div>
 
             <div className="mt-6">
-              <form action="#" method="POST" className="grid grid-cols-6 gap-6">
-                <div className="col-span-6 sm:col-span-3 ">
-                  <TextField
-                    id="first-name"
-                    name="first-name"
-                    autoComplete="given-name"
-                    placeholder="First name"
-                    required
-                  />
-                </div>
-                <div className="col-span-6 sm:col-span-3 ">
-                  <TextField
-                    id="last-name"
-                    name="last-name"
-                    autoComplete="family-name"
-                    placeholder="Last name"
-                    required
-                  />
-                </div>
-
-                <div className="col-span-6">
-                  <TextField
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-
-                <div className="col-span-6">
-                  <TextField
-                    id="password"
-                    name="password"
-                    type="password"
-                    autoComplete="current-password"
-                    placeholder="Password"
-                    required
-                  />
-                </div>
-
-                <div className="col-span-6">
-                  <p className="text-sm text-slate-500">
-                    By creating an account, you agreeing to our{" "}
-                    <a
-                      href="https://github.com/iamsahebgiri"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-bold text-slate-700"
-                    >
-                      Privacy Policy
-                    </a>
-                    , and{" "}
-                    <span
-                      href="https://github.com/iamsahebgiri"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-bold text-slate-700"
-                    >
-                      Electronics Communication Policy.
-                    </span>
-                  </p>
-                </div>
-
-                <div className="col-span-6">
-                  <Button size="medium" className="w-full" isLoading>
-                    Sign Up
-                  </Button>
-                </div>
-                <div className="col-span-6">
-                  <div className="w-full text-center">
-                    Already have an account?{" "}
-                    <Link href="/sign-in">
-                      <a className="font-extrabold text-slate-700">Sign In</a>
-                    </Link>
-                  </div>
-                </div>
-              </form>
+              <SignUpForm />
             </div>
           </div>
         </div>
