@@ -5,7 +5,7 @@ import { useAuth } from "lib/auth";
 import React, { useEffect, useState } from "react";
 
 const OtpAuth = () => {
-  const [retriesIn, setRetriesIn] = useState(2);
+  const [retriesIn, setRetriesIn] = useState(60);
 
   const { user, verifyAccount, loading } = useAuth();
   let redactedEmail = "";

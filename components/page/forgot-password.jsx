@@ -1,9 +1,11 @@
 import { Button } from "components/common/button";
 import { TextField } from "components/common/text-field";
 import FullHeader from "components/layout/full-header";
+import { useAuth } from "lib/auth";
 import React from "react";
 
 const ForgotPassword = () => {
+  const { verifyAccount, loading } = useAuth();
   return (
     <FullHeader>
       <div className="space-y-6">
@@ -17,7 +19,12 @@ const ForgotPassword = () => {
           </p>
         </div>
         <div>
-          <form action="#" method="POST">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              verifyAccount("/verify-otp");
+            }}
+          >
             <div>
               <TextField
                 id="email"
@@ -28,18 +35,20 @@ const ForgotPassword = () => {
                 required
               />
             </div>
+            <div className="mt-6">
+              <Button className="w-full" isLoading={loading} type="submit">
+                Send Link
+              </Button>
+              <div className="w-full mt-4 text-center">
+                <a
+                  href="#"
+                  className="font-extrabold text-slate-700 hover:text-slate-600"
+                >
+                  Forgot your email?
+                </a>
+              </div>
+            </div>
           </form>
-        </div>
-        <div>
-          <Button className="w-full">Send Link</Button>
-          <div className="w-full mt-4 text-center">
-            <a
-              href="#"
-              className="font-extrabold text-slate-700 hover:text-slate-600"
-            >
-              Forgot your email?
-            </a>
-          </div>
         </div>
       </div>
     </FullHeader>
