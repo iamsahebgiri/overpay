@@ -7,7 +7,7 @@ const FullHeader = ({ children }) => {
     <div className="bg-slate-100 min-h-screen flex flex-col justify-between">
       <Header />
       <div className="mx-auto w-full max-w-7xl px-2 py-3">
-        <div className="bg-white rounded-md py-6 px-4 max-w-md mx-auto">
+        <div className="bg-white rounded-xl p-8 max-w-md mx-auto">
           {children}
         </div>
       </div>
