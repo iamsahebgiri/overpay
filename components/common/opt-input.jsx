@@ -26,12 +26,6 @@ const OtpInput = () => {
     let value = e.target.value;
 
     if (value !== "") {
-      let input;
-      value;
-      if (Number(e.target.dataset.id) + i < fields) {
-        input[Number(e.target.dataset.id) + i] = value;
-      }
-      setInputs(input);
       const newTarget =
         inputRefs[
           e.target.dataset.id < inputs.length
@@ -115,6 +109,7 @@ const OtpInput = () => {
           onKeyDown={handleKeyDown}
           onChange={handleChange}
           maxLength="1"
+          type="text"
           className="m-2 border h-10 w-10 text-center form-control rounded font-extrabold"
         />
       ))}
