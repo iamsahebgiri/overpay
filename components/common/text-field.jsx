@@ -3,7 +3,10 @@ import { classNames } from "lib/classnames";
 import * as React from "react";
 
 export const TextField = React.forwardRef(
-  ({ label, id, name, type = "text", className, ...rest }, forwardedRef) => {
+  (
+    { label, id, name, type = "text", size, className, ...rest },
+    forwardedRef
+  ) => {
     const [show, setShow] = React.useState(false);
 
     return (
@@ -21,8 +24,9 @@ export const TextField = React.forwardRef(
             name={name}
             type={show ? "text" : type}
             className={classNames(
-              "block w-full py-3 rounded-xl placeholder-slate-400 bg-white border border-slate-300 focus:border-brand-500 focus:ring-0",
+              "block py-3 rounded-xl placeholder-slate-400 bg-white border border-slate-300 focus:border-brand-500 focus:ring-0",
               type === "password" && "pr-12",
+              size !== "square" && "w-full",
               className
             )}
           />

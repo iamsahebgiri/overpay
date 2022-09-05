@@ -9,7 +9,6 @@ const DOWN_ARROW_KEY = 40;
 
 const OtpInput = () => {
   const fields = 5;
-  const [value, setValue] = useState("");
   const [inputs, setInputs] = useState([]);
 
   const inputRefs = useRef([]);
@@ -111,6 +110,7 @@ const OtpInput = () => {
           maxLength="1"
           type="text"
           className="m-2 border h-10 w-10 text-center form-control rounded font-extrabold"
+          size="square"
         />
       ))}
     </div>

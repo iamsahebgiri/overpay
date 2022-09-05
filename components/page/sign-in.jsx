@@ -1,11 +1,9 @@
-import { Button } from "components/common/button";
 import { ButtonLink } from "components/common/button-link";
 import Carousel from "components/common/carousel";
 import { Google, Overpay } from "components/common/logo";
-import { TextField } from "components/common/text-field";
+import SignInForm from "components/form/sign-in";
 import { Footer } from "components/layout/footer";
 import Link from "next/link";
-import React from "react";
 
 const SignIn = () => {
   return (
@@ -53,68 +51,7 @@ const SignIn = () => {
             </div>
 
             <div className="mt-6">
-              <form action="#" method="POST" className="space-y-6">
-                <div>
-                  <TextField
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="Username or email"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-1">
-                  <TextField
-                    id="password"
-                    name="password"
-                    type="password"
-                    autoComplete="current-password"
-                    placeholder="Password"
-                    required
-                  />
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <input
-                      id="remember-me"
-                      name="remember-me"
-                      type="checkbox"
-                      className="h-s w-s text-brand-600 focus:ring-brand-500 border-slate-300 rounded-full"
-                    />
-                    <label
-                      htmlFor="remember-me"
-                      className="ml-2 block font-semibold text-sm text-slate-900"
-                    >
-                      Remember me
-                    </label>
-                  </div>
-
-                  <div className="text-sm">
-                    <Link href="/forgot-password">
-                      <a className="font-semibold text-brand-500 hover:text-brand-600">
-                        Forgot password?
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-
-                <div>
-                  <Button size="medium" className="w-full">
-                    Sign in
-                  </Button>
-                </div>
-                <div>
-                  <div className="w-full text-center">
-                    Don&apos;t have an account?{" "}
-                    <Link href="/sign-up">
-                      <a className="font-extrabold text-slate-700">Sign Up</a>
-                    </Link>
-                  </div>
-                </div>
-              </form>
+              <SignInForm />
             </div>
           </div>
         </div>
