@@ -54,7 +54,7 @@ const DEFAULT_USER = {
 };
 ```
 
-## Enpoints
+## Endpoints
 
 - [Sign Up](https://overpay-iota.vercel.app/sign-up)
 - [Sign In](https://overpay-iota.vercel.app/sign-in)
